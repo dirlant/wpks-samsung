@@ -44,8 +44,7 @@
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
 
-      <?php $slider = get_field('home_sliders', 'option') ?>  
-      <?php //print_r($slider) ?>
+      <?php $slider = get_field('home_sliders', 'option') ?>      
       <ol class="carousel-indicators">
                 
         <?php for ($i=0; $i < count($slider); $i++): ?>
@@ -84,122 +83,58 @@
   ==================== -->
   <section id="about" class="section">
       <div class="container">
-          <div class="row">
+          <div class="row">              
               <div class="col-md-7 col-sm-12 wow fadeInLeft">
                   <div class="sub-heading">
-                      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsa recusandae consequatur veniam, reiciendis odit quia eaque vel eius a.</h3>
+                      <h3><?php echo get_field('titulo', 'option')  ?></h3>
                   </div>
                   <div class="block">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla-mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
-                      <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, aspernatur.
-                      </p>
+                      <p><?php echo get_field('textarea', 'option')  ?></p>
                   </div>
               </div>
               <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+                  <?php $nosotros = get_field('array_slider', 'option') ?>                    
                   <div class="about-slider">
                       <div class="init-slider" id="countdown_dashboard">
-                          <div class="about-item">
-                              <img src="<?php echo get_template_directory_uri()?>/images/about/1.jpg" alt="" class="img-responsive">
-                          </div>
-                          <div class="about-item">
-                              <img src="<?php echo get_template_directory_uri()?>/images/about/2.jpg" alt="" class="img-responsive">
-                          </div>
-                          <div class="about-item">
-                              <img src="<?php echo get_template_directory_uri()?>/images/about/3.jpg" alt="" class="img-responsive">
-                          </div>
+                          <?php for ($i=0; $i < count($nosotros); $i++): ?>                          
+                            <div class="about-item">
+                                <img src="<?php echo $nosotros[$i]['imagen']['url'] ?>" alt="" class="img-responsive">
+                            </div>
+                          <?php endfor; ?>                
                       </div>
                   </div>
               </div>
           </div>
       </div>
   </section><!-- #about close -->
-  <!-- 
-  About start
-  ==================== -->
 
   <!-- 
   Service start
   ==================== -->
   <section id="service" class="section">
-      <div class="container">
-          <div class="row">
-              <div class="heading wow fadeInUp">
-                  <h2>Our service</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
-              </div>
-              <div class="col-sm-6 col-md-3 wow fadeInLeft">
-                  <div class="service">
-                      <div class="icon-box">
-                          <span class="icon">
-                              <i class="ion-android-desktop"></i>   
-                          </span>
-                      </div>
-                      <div class="caption">
-                          <h3>Fully Responsive</h3>
-                          <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
-                  <div class="service">
-                      <div class="icon-box">
-                          <span class="icon">
-                              <i class="ion-speedometer"></i>   
-                          </span>
-                      </div>
-                      <div class="caption">
-                          <h3>Speed Optimized</h3>
-                          <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
-                  <div class="service">
-                      <div class="icon-box">
-                          <span class="icon">
-                              <i class="ion-ios-infinite-outline"></i>   
-                          </span>
-                      </div>
-                      <div class="caption">
-                          <h3>Tons of Feature</h3>
-                          <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
-                  <div class="service">
-                      <div class="icon-box">
-                          <span class="icon">
-                              <i class="ion-ios-cloud-outline"></i>   
-                          </span>
-                      </div>
-                      <div class="caption">
-                          <h3>Cloud Option</h3>
-                          <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div><!-- .container close -->
-  </section><!-- #service close -->
+    <div class="container">
+      <div class="row">
+        <div class="heading wow fadeInUp">
+            <h2><?php echo get_field('servicio_titulo', 'option') ?></h2>
+            <p><?php echo get_field('servicio_textarea', 'option') ?></p>
+        </div>
 
-  <section id="call-to-action" class="section">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12 wow text-center">
-                  <div class="block">
-                      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Enter Your Email Address">
-                          <button class="btn btn-default btn-submit" type="submit">Get Notified</button>
-                      </div>
-                  </div>
-              </div>
+        <?php $servicios = get_field('servicios', 'option') ?>                                  
+        <?php for ($i=0; $i < count($servicios); $i++): ?>                 
+          <div class="col-sm-6 col-md-3 wow fadeInLeft">                  
+            <div class="icon-box">                        
+              <img src="<?php echo $servicios[$i]['imagen']['url'] ?>" alt="">                          
+            </div>
+            <div class="caption">
+              <h3><?php echo $servicios[$i]['titulo'] ?></h3>
+              <p><?php echo $servicios[$i]['texto'] ?></p>
+            </div>                  
           </div>
+        <?php endfor; ?>
+
       </div>
-  </section><!-- #call-to-action close -->
+    </div>
+  </section>
 
   <!-- 
   Contact start

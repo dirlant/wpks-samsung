@@ -13,9 +13,29 @@ if (function_exists('acf_add_options_page')) {
   ));
 
   acf_add_options_sub_page(array(
-    'page_title' => 'Slider',
+    'page_title' => 'Sección Inicio',
     'menu_title' => 'Slider',
-    'menu_slug' => $parent['menu_slug'].'-header',
+    'menu_slug' => $parent['menu_slug'].'-inicio',
+    'capability' => 'edit_posts',
+    'parent_slug' => $parent['menu_slug'],
+    'position' => false,
+    'icon_url' => false
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => 'Sección Nosotros',
+    'menu_title' => 'Nosotros',
+    'menu_slug' => $parent['menu_slug'].'-nosotros',
+    'capability' => 'edit_posts',
+    'parent_slug' => $parent['menu_slug'],
+    'position' => false,
+    'icon_url' => false
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => 'Sección Servicios',
+    'menu_title' => 'Servicios',
+    'menu_slug' => $parent['menu_slug'].'-servicios',
     'capability' => 'edit_posts',
     'parent_slug' => $parent['menu_slug'],
     'position' => false,

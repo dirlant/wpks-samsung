@@ -22,8 +22,8 @@
                   <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="#">
-                  <img class="logo-1" src="<?php echo get_template_directory_uri()?>/images/logo.png" alt="LOGO">
-                  <img class="logo-2" src="<?php echo get_template_directory_uri()?>/images/logo-2.png" alt="LOGO">
+                  <img class="logo-1" src="<?php $logo = get_field('logo1', 'option'); echo $logo['url'] ?>" alt="LOGO">
+                  <img class="logo-2" src="<?php $logo = get_field('logo2', 'option'); echo $logo['url'] ?>" alt="LOGO">
               </a>
           </div>
 
@@ -40,9 +40,7 @@
   </div>
 
 
-  <section id="hero-area">
-    
-
+  <section id="hero-area">    
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
 
@@ -70,73 +68,13 @@
       <!-- Controls -->
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Anterior</span>
       </a>
       <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Siguiente</span>
       </a>
     </div>
-
-      <div class="container">
-
-
-
-
-
-
-
-
-
-          <div class="row">
-              <div class="col-md-6">
-                  <div class="block">
-                      <h1 class="wow fadeInDown">A passionate web company</h1>
-                      <p class="wow fadeInDown" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                      <div class="wow fadeInDown" data-wow-delay="0.3s">
-                          <a class="btn btn-default btn-home" href="#about" role="button">Get Started</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 wow zoomIn">
-                  <div class="block">
-                      <div class="counter text-center">
-                          <ul id="countdown_dashboard">
-                              <li>
-                                  <div class="dash days_dash">
-                                      <div class="digit">0</div>
-                                      <div class="digit">0</div>
-                                      <div class="digit">0</div>
-                                      <span class="dash_title">Days</span>
-                                  </div>
-                              </li>
-                              <li>
-                                  <div class="dash hours_dash">
-                                      <div class="digit">0</div>
-                                      <div class="digit">0</div>
-                                      <span class="dash_title">Hours</span>
-                                  </div>
-                              </li>
-                              <li>
-                                  <div class="dash minutes_dash">
-                                      <div class="digit">0</div>
-                                      <div class="digit">0</div>
-                                      <span class="dash_title">Minutes</span>
-                                  </div>
-                              </li>
-                              <li>
-                                  <div class="dash seconds_dash">
-                                      <div class="digit">0</div>
-                                      <div class="digit">0</div>
-                                      <span class="dash_title">Seconds</span>
-                                  </div>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div><!-- .row close -->
-      </div><!-- .container close -->
   </section><!-- header close -->
 
 
@@ -160,7 +98,7 @@
               </div>
               <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
                   <div class="about-slider">
-                      <div class="init-slider">
+                      <div class="init-slider" id="countdown_dashboard">
                           <div class="about-item">
                               <img src="<?php echo get_template_directory_uri()?>/images/about/1.jpg" alt="" class="img-responsive">
                           </div>

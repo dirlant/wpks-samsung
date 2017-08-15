@@ -12,6 +12,16 @@ if (function_exists('acf_add_options_page')) {
     'redirect' => false
   ));
 
+  acf_add_options_sub_page(array(
+    'page_title' => 'Slider',
+    'menu_title' => 'Slider',
+    'menu_slug' => $parent['menu_slug'].'-header',
+    'capability' => 'edit_posts',
+    'parent_slug' => $parent['menu_slug'],
+    'position' => false,
+    'icon_url' => false
+  ));
+
 }
 // Llamados a las librerias
 function nombretema_styles(){  

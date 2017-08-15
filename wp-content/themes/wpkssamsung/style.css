@@ -10,3 +10,23 @@ License URI: http://www.gnu.org/license/gpl-2.0.html
 Tags: Fotografía, Fotos, Venezuela
 Text Domain: fotografia
 */
+
+/* Slider Bootstrap */
+
+.glyphicon-chevron-right:before{
+	font-family: 'FontAwesome';
+	content: "\f054";
+}
+.glyphicon-chevron-left:before{
+	font-family: 'FontAwesome';
+	content: "\f053";
+}
+#hero-area{
+	padding: 92px 0;
+	background: rgba(255, 255, 255, 0) linear-gradient(135deg, #333756 0%, #0eceec 100%) repeat scroll 0 0;
+}
+
+.carousel-inner{
+	min-height: 500px;
+	height: auto;
+}

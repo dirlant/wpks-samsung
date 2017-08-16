@@ -170,16 +170,20 @@
 
               <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-1 wow fadeInUp" data-wow-delay="0.3s">
                   <div class="form-group">
+                      <!--<?php  echo do_shortcode('[contact-form-7 id="61" title="Contact form 1"]'); ?> -->
+                      
                       <form action="#" method="post" id="contact-form">
                           <div class="input-field">
-                              <input type="text" class="form-control" placeholder="Your Name" name="name">
+                              <input type="text" class="form-control" placeholder="Su nombre" name="name">
                           </div>
                           <div class="input-field">
-                              <input type="email" class="form-control" placeholder="Email Address" name="email">
+                              <input type="email" class="form-control" placeholder="Correo electrónico" name="email">
                           </div>
                           <div class="input-field">
-                              <textarea class="form-control" placeholder="Your Message" rows="3" name="message"></textarea>
+                              <textarea class="form-control" placeholder="Su mensaje" rows="3" name="message"></textarea>
                           </div>
+                          <input type="hidden" class="form-control" name="to">
+
                           <button class="btn btn-send" type="submit">Send me</button>
                       </form>
 
@@ -189,6 +193,7 @@
                       <div id="error">
                           <p>Your Message was not sent successfully</p>
                       </div>
+                      
                   </div>
               </div>
           </div>

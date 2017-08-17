@@ -42,6 +42,16 @@ if (function_exists('acf_add_options_page')) {
     'icon_url' => false
   ));
 
+  acf_add_options_sub_page(array(
+    'page_title' => 'Sección Contacto',
+    'menu_title' => 'Contacto',
+    'menu_slug' => $parent['menu_slug'].'-contacto',
+    'capability' => 'edit_posts',
+    'parent_slug' => $parent['menu_slug'],
+    'position' => false,
+    'icon_url' => false
+  ));
+
 }
 // Llamados a las librerias
 function nombretema_styles(){  
